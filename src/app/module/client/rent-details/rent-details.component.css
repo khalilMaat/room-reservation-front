@@ -1,0 +1,21 @@
+.text-sm {
+  font-size: .875rem!important
+}
+
+.text-sm-start {
+  text-align: left!important
+}
+.text-sm-end {
+  text-align: right!important
+}
+
+.text-sm-center {
+  text-align: center!important
+}
+.text-sm {
+  line-height: 1.5
+}
+
+b {
+  color: #4E73DF;
+}

@@ -1,0 +1,60 @@
+<div class="container-fluid py-4 mt-2">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card border border-2">
+        <div class="card-header pb-0">
+          <div class="d-flex align-items-center">
+            <p class="mb-0 card-header-text1 bold">Add New room</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <!-- your-component.component.html -->
+
+          <form [formGroup]="roomForm" (ngSubmit)="createroom()">
+            <p class="text-uppercase card-header-text2 text-sm">room Information</p>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="name" class="form-control-label">Name</label>
+                  <input id="name" class="form-control" type="text" formControlName="name">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="capacity" class="form-control-label">Capacity</label>
+                  <input id="capacity" class="form-control" type="text" formControlName="capacity">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="equipment" class="form-control-label">equipment</label>
+                  <input id="equipment" class="form-control" type="text" formControlName="equipment">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="price" class="form-control-label">Price</label>
+                  <input id="price" class="form-control" type="text" formControlName="price">
+                </div>
+              </div>
+              
+            </div>
+
+            <hr class="horizontal dark">
+
+           
+           
+
+            <div class="row mt-3">
+              <button type="submit" class="btn btn-primary btn-lg w-100">
+                <span class="btn-inner--text text-white">Create</span>
+              </button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+   
+  </div>
+</div>

@@ -1,0 +1,7 @@
+export enum StatusEnum {
+  CANCELED = 'CANCELED',
+  PENDING = 'PENDING',
+  CONFIRMED = 'CONFIRMED',
+  PAYED = 'PAYED',
+  COMPLETED = 'COMPLETED'
+}

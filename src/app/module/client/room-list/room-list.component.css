@@ -1,0 +1,36 @@
+.card {
+  border-radius: 15px;
+}
+
+.card-img-top {
+  border-radius: 15px;
+}
+
+
+
+.section1 {
+  background-image: url('/assets/img/item-large2.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value for transparency */
+}
+
+
+

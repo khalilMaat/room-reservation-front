@@ -1,0 +1,137 @@
+<user-navbar></user-navbar>
+
+
+<section class="section1">
+  <div class="container">
+    <!-- Content in the middle of the section -->
+    <div class="searchbox">
+      <!-- search section start  -->
+      <section id="search">
+        <div class="container search-block p-5">
+
+          <form class="row" [formGroup]="roomForm" (ngSubmit)="onSubmit()">
+            <div class="col-12 col-md-6 col-lg-3 mt-4 mt-lg-0">
+              <label for="pickup-date" class="label-style text-capitalize form-label">Pick Up Date</label>
+              <div class="input-group date" id="datepicker2">
+                <input type="date" formControlName="pickupDate" class="form-control p-3" id="pickup-date"/>
+
+                <span class="input-group-append">
+                            <span class="search-icon-position position-absolute p-3">
+                                <i class="search-icons" icon="solar:calendar-broken"></i>
+                            </span>
+                        </span>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mt-4 mt-lg-0">
+              <label for="room" class="text-capitalize form-label">room brand</label>
+              <div class="input-group date ">
+                <!-- <input type="text" class="form-control p-3 " id="room" placeholder="Select Car Group" /> -->
+                <select formControlName="brand" class="form-select form-control p-3" id="room"
+                        style="background-image: none;">
+                  <option value="">All Brands</option>
+                  <ng-container *ngFor="let brand of carBrands">
+                    <option value="{{ brand }}">{{ brand }}</option>
+                  </ng-container>
+                </select>
+                <span class="search-icon-position position-absolute p-3 ">
+                  <i class="search-icons" icon="solar:bus-outline"></i>
+                </span>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mt-4 mt-lg-0">
+              <label for="location" class="label-style text-capitalize form-label">model</label>
+              <div class="input-group date">
+                <input type="text" formControlName="model" class="form-control p-3 position-relative" id="location" />
+                <span class="search-icon-position position-absolute p-3 ">
+                    <i class="search-icons" icon="solar:map-arrow-square-outline"></i>
+                </span>
+
+
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mt-4 mt-lg-0">
+              <label for="pick-up-date" class="label-style text-capitalize form-label">Max Price</label>
+              <div class="input-group date" id="datepicker1">
+                <input type="number" formControlName="maxPrice" class="form-control p-3" id="pick-up-date"/>
+
+                <span class="input-group-append">
+                            <span class="search-icon-position position-absolute p-3">
+                                <i class="search-icons" icon="solar:calendar-broken"></i>
+                            </span>
+                        </span>
+
+              </div>
+            </div>
+            <div class="d-grid gap-2 mt-4">
+              <button class="btn btn-primary" type="submit">Find your car</button>
+            </div>
+          </form>
+
+
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+<section id="rental" class="position-relative">
+  <div class="container">
+    <h2 class=" text-center my-5">Available<span class="text-primary"> room </span></h2>
+
+    <div class="swiper rental-swiper mb-5">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="row">
+            <div class="col-md-4 " *ngFor="let room of this.RoomDetails">
+              <div class="card custom-card1 position-relative my-3 shadow">
+                <a><img src="assets/img/car1.png" class="card-img-top" alt="car-img"></a>
+                <div class="card-body p-4">
+                  <a>
+                    <h4 class="car-title text-black mb-4">{{ room }}, <small><i>{{ room }}</i></small>
+                    </h4>
+                  </a>
+                  <div class="card-text ">
+                    <div class="row">
+                      <div class="col-6">
+                    <span class="iconify my-1" data-icon="bi:fuel-pump-fill" data-width="25" data-height="25"
+                          style="color: #575757;"></span><span> : {{ room }}</span><br>
+                        <span class="iconify mt-1" data-icon="material-symbols:airline-seat-recline-extra"
+                              data-width="28"
+                              data-height="28" style="color: #575757;"></span><span> : 5 Seats</span><br>
+                      </div>
+                      <div class="col-6">
+                      <span class="iconify my-1" data-icon="tabler:manual-gearbox" data-width="26" data-height="26"
+                            style="color: #575757;"></span><span> : {{ room }}</span><br>
+                        <span class="iconify mt-1" data-icon="mdi:ac-unit" style="color: #575757;" data-width="26"
+                              data-height="26"></span><span> : Available</span><br>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="position-absolute top-0 start-0 p-2 m-2 price-font">
+                    {{ room }} TND<span class="rental-price">/day</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+
+                    <button class="btn custom-btn1-sm" [routerLink]="['/user/room-details', room.id]">Full Spec
+                    </button>
+                    <button class="btn custom-btn1-sm">Rent now</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+</section>
+
+
