@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {ReservationService} from "../../../core/service/reservation-service";
-import {ReservationDetailsModel} from "../../../model/ReservationDetails.model";
+import {ReservationDetails} from "../../../model/ReservationDetails.model";
 
 @Component({
   selector: 'app-rent-details',
@@ -10,7 +10,7 @@ import {ReservationDetailsModel} from "../../../model/ReservationDetails.model";
 })
 export class RentDetailsComponent implements OnInit {
 
-  rentalDetails = new ReservationDetailsModel();
+  rentalDetails = new ReservationDetails();
 
   constructor(private activatedRoute: ActivatedRoute, private reservationService: ReservationService) {
   }

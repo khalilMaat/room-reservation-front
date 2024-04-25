@@ -4,37 +4,31 @@
       <div class="card border border-2">
         <div class="card-header pb-0">
           <div class="d-flex align-items-center">
-            <p class="mb-0 card-header-text1 bold">Add New Reservation</p>
+            <p class="mb-0 card-header-text1 bold">Add New user</p>
           </div>
         </div>
         <div class="card-body">
           <!-- your-component.component.html -->
 
-          <form [formGroup]="reservationForm" (ngSubmit)="createReservation()">
-            <p class="text-uppercase card-header-text2 text-sm">Reservation Information</p>
+          <form [formGroup]="userForm" (ngSubmit)="createUser()">
+            <p class="text-uppercase card-header-text2 text-sm">user Information</p>
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="name" class="form-control-label">userId</label>
-                  <input id="name" class="form-control" type="text" formControlName="userId">
+                  <label for="name" class="form-control-label">fullname</label>
+                  <input id="name" class="form-control" type="text" formControlName="fullname">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="capacity" class="form-control-label">roomId</label>
-                  <input id="capacity" class="form-control" type="text" formControlName="roomId">
+                  <label for="capacity" class="form-control-label">email</label>
+                  <input id="capacity" class="form-control" type="text" formControlName="email">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="equipment" class="form-control-label">startTime</label>
-                  <input id="equipment" class="form-control" type="text" formControlName="startTime">
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="equipment" class="form-control-label">endTime</label>
-                  <input id="equipment" class="form-control" type="text" formControlName="endTime">
+                  <label for="equipment" class="form-control-label">role</label>
+                  <input id="equipment" class="form-control" type="text" formControlName="role">
                 </div>
               </div>
       

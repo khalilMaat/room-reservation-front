@@ -27,9 +27,10 @@ export class AllroomComponent implements OnInit {
     console.log("today", today);
     this.roomForm = this.formBuilder.group({
       pickupDate: [today],
-      brand: [''],
-      model: [''],
-      maxPrice: [''],
+      name: [''],
+      price: [''],
+      capacity: [''],
+      equipment: [''],
     });
 
     this.onSubmit();
@@ -44,8 +45,8 @@ export class AllroomComponent implements OnInit {
 
     this.RoomService.findByFilters(
       formValue.pickupDate,
-      formValue.brand,
-      formValue.model
+      formValue.name,
+      formValue.capacity
     ).subscribe(
       response => {
         console.log(response);

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpParams} from "@angular/common/http";
 import {RoomDetails} from "../../model/RoomDetails.model";
 import {AuthService} from "./auth.service";
-import {ReservationDetailsModel} from "../../model/ReservationDetails.model";
+import {ReservationDetails} from "../../model/ReservationDetails.model";
 import {Observable} from "rxjs";
 
 @Injectable({
@@ -24,16 +24,16 @@ export class RoomService {
     return this.http.get<any>(`${this.baseUrl}/all`);
   }
 
-  countByNumberCarByBrand() {
-    return this.http.get("http://localhost:8080/api/v1/analysis/count-number-car-by-brand");
+  countByNumberRoom() {
+    return this.http.get("http://localhost:4000/analysis/count-number-room");
   }
 
   countByPickupMonth() {
-    return this.http.get("http://localhost:8080/api/v1/analysis/count-by-pickup-month");
+    return this.http.get("http://localhost:4000/analysis/count-by-pickup-month");
   }
 
   countByCreatedOn() {
-    return this.http.get("http://localhost:8080/api/v1/analysis/count-by-created-on");
+    return this.http.get("http://localhost:4000/analysis/count-by-created-on");
   }
 
 

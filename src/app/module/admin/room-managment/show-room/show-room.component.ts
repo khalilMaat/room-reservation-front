@@ -36,6 +36,7 @@ export class ShowroomComponent implements OnInit {
           this.dtTrigger.next(null);
       }, error: (error) => {
         console.log("error get all room : ", error)
+        this.router.navigate(['/admin/dashboard/show-room']);
       }
     }
     )

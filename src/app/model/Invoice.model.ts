@@ -1,5 +1,5 @@
 import {UserModel} from "./User.model";
-import {ReservationDetailsModel} from "./ReservationDetails.model";
+import {ReservationDetails} from "./ReservationDetails.model";
 import {PaymentMethodEnum} from "./enum/PaymentMethod.enum";
 
 export class InvoiceModel {
@@ -7,14 +7,14 @@ export class InvoiceModel {
   issuedDate?: Date;
   paymentMethod?: PaymentMethodEnum;
   admin?: UserModel = {};
-  reservation?: ReservationDetailsModel = {};
+  reservation?: ReservationDetails = {};
 
   constructor(
     id?: string,
     issuedDate?: Date,
     paymentMethod?: PaymentMethodEnum,
     admin?: UserModel,
-    reservation?: ReservationDetailsModel,
+    reservation?: ReservationDetails,
   ) {
     this.id = id;
     this.issuedDate = issuedDate;

@@ -25,13 +25,13 @@ export class MainComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.NumberCarByBrand();
+    this.NumberRoom();
     this.PickupMonth();
     this.countByCreatedOn();
 
   }
-  NumberCarByBrand() {
-    this.RoomService.countByNumberCarByBrand().subscribe(
+  NumberRoom() {
+    this.RoomService.countByNumberRoom().subscribe(
       (response: any) => {
         this.dataa = response;
         this.carChartData = this.dataa.map((item: any) => ({

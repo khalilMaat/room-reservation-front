@@ -5,7 +5,7 @@ import {ClientRoutingModule} from './client-routing.module';
 import {HomeComponent} from './home/home.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {LoginComponent} from './auth/login/login.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {RegisterComponent} from './auth/register/register.component';
 import {RoomDetailsComponent} from './room-details/room-details.component';
 import {SharedModule} from "../../shared/shared.module";
@@ -32,6 +32,7 @@ import {NgbAccordionButton, NgbModule} from "@ng-bootstrap/ng-bootstrap";
     CommonModule,
     ClientRoutingModule,
     ReactiveFormsModule,
+    FormsModule,
     SharedModule,
     RouterModule,
     CarouselModule,

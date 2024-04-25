@@ -1,23 +1,23 @@
 import {Component, OnInit} from '@angular/core';
 import {RoomDetails} from "../../../../model/RoomDetails.model";
-import { ReservationService } from 'src/app/core/service/reservation-service';
+import {UserService} from "../../../../core/service/user.service";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 import {Subject} from "rxjs";
 
 @Component({
-  selector: 'app-show-reservation',
-  templateUrl: './show-reservation.component.html',
-  styleUrls: ['./show-reservation.component.css']
+  selector: 'app-show-user',
+  templateUrl: './show-user.component.html',
+  styleUrls: ['./show-user.component.css']
 })
-export class ShowRerservationComponent implements OnInit {
+export class ShowUserComponent implements OnInit {
   dtOptions: DataTables.Settings = {};
   dtTrigger: Subject<any> = new Subject<any>();
 
-  listReservationDetails: any = [];
+  listUserDetails: any = [];
 
 
-  constructor(private RerservationService: ReservationService,
+  constructor(private UserService: UserService,
               private router: Router) {
   }
   ngOnInit(): void {
@@ -28,11 +28,11 @@ export class ShowRerservationComponent implements OnInit {
       }
     }
 
-    this.RerservationService.getAllReservation().subscribe({
+    this.UserService.getAll().subscribe({
       next: (response) => {
-          this.listReservationDetails = response;
+          this.listUserDetails = response;
           console.log("response get all user : ", response)
-          console.log("listReservationDetails error get all user : ", this.listReservationDetails)
+          console.log("listUserDetails error get all user : ", this.listUserDetails)
           this.dtTrigger.next(null);
       }, error: (error) => {
         console.log("error get all user : ", error)
@@ -54,13 +54,13 @@ export class ShowRerservationComponent implements OnInit {
   };
 
 
-  deleteRerservationById(id: string | undefined) {
+  deleteroomById(id: string | undefined) {
 
 
-    this.RerservationService.deleteReservationById(id).subscribe(
+    this.UserService.deleteUserById(id).subscribe(
       (response) => {
         console.log(response)
-          this.listReservationDetails = this.listReservationDetails
+          this.listUserDetails = this.listUserDetails
             .filter((item: { id: string | undefined; }) => item.id !== id);
 
       }, error =>{

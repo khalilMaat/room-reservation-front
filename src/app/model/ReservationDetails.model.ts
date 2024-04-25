@@ -1,10 +1,11 @@
+import { numberFormat } from "highcharts";
 import {RoomDetails} from "./RoomDetails.model";
 import {UserModel} from "./User.model";
 
-export class ReservationDetailsModel {
+export class ReservationDetails {
   id?: string;
-  pickupDate?: Date;
-  returnDate?: Date;
+  startTime?: Date;
+  endTime?: Date;
   totalPrice?: number;
   nbDate?: number;
   status?: string;
@@ -14,8 +15,8 @@ export class ReservationDetailsModel {
 
   constructor(
     id?: string,
-    pickupDate?: Date,
-    returnDate?: Date,
+    startTime?: Date,
+    endTime?: Date,
     totalPrice?: number,
     nbDate?: number,
     status?: string,
@@ -23,8 +24,8 @@ export class ReservationDetailsModel {
     room?: RoomDetails
   ) {
     this.id = id;
-    this.pickupDate = pickupDate;
-    this.returnDate = returnDate;
+    this.startTime = startTime;
+    this.endTime = endTime;
     this.totalPrice = totalPrice;
     this.nbDate = nbDate;
     this.status = status;

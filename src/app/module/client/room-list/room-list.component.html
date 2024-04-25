@@ -1,17 +1,16 @@
 <section id="rental" class="position-relative">
   <div class="container">
     <h2 class=" text-center my-5">Available<span class="text-primary"> room </span></h2>
-
+    
     <div class="swiper rental-swiper mb-5">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="row">
             <div class="col-md-4 " *ngFor="let room of this.RoomDetails">
               <div class="card custom-card1 position-relative my-3 shadow">
-                <a><img src="assets/img/car1.png" class="card-img-top" alt="car-img"></a>
                 <div class="card-body p-4">
                   <a>
-                    <h4 class="car-title text-black mb-4">{{ room }}, <small><i>{{ room }}</i></small>
+                    <h4 class="car-title text-black mb-4">{{ room.name }}, <small><i>{{ room }}</i></small>
                     </h4>
                   </a>
                   <div class="card-text ">

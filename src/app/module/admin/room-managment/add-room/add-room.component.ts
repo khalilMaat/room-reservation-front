@@ -44,7 +44,9 @@ export class AddroomComponent implements OnInit {
           this.roomForm.reset();
         },
         (error) => {
-          console.error('Error creating room:', error.error.message);
+          console.log(error.message);
+          
+          this.router.navigate(['/admin/dashboard/show-room']);
         }
       );
     }

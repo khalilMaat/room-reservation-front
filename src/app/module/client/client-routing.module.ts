@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: 'navbar', component: NavbarComponent},
   {path: 'all-room', component: AllroomComponent},
   {path: 'room-list', component: roomListComponent},
-  {path: 'rent-details/:id', component: RentDetailsComponent},
+  //{path: 'rent-details/:id', component: RentDetailsComponent},
   {path: 'room-details/:id', component: RoomDetailsComponent},
 
 ];

@@ -4,7 +4,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {CommonModule} from "@angular/common";
-import {FormsModule} from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {AdminModule} from "./module/admin/admin.module";
 import {ClientModule} from "./module/client/client.module";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
@@ -24,13 +24,14 @@ import { MyInterceptor } from './core/service/interceptor';
     AppRoutingModule,
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     AdminModule,
     ClientModule,
     HttpClientModule,
     RouterModule,
     DataTablesModule,
     NgbModule
-    // Routes
+    // RoutesauthorizeAdmin
 
   ],
   providers: [

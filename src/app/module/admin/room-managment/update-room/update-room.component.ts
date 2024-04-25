@@ -64,8 +64,6 @@ export class UpdateroomComponent implements OnInit {
       },
       (error) => {
         this.router.navigate(['/admin/dashboard/show-room']);
-
-
       }
     );
   }
